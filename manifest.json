@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Better Twitch Donations",
+  "description": "Creates a better Twitch donation button.",
+  "version": "1.0.0",
+  "page_action": {
+      "default_icon": "twitch-tv-logo.png"
+  },
+  "permissions": [
+      "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+          "https://www.twitch.tv/*",
+          "http://www.twitch.tv/*"
+      ],
+      "js": ["embed.js"]
+    }
+  ],
+  "background": {
+      "scripts": ["background.js"]
+  }
+}
